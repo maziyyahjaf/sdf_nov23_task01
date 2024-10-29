@@ -76,28 +76,6 @@ public class ExtractData {
 
     }
 
-    // create a new list of appData based on each category?
-    public Map<String, AppData> filterBasedOnCategory(List<AppData> appList, Set<String> uniqueCategory) {
-
-        Map<String, AppData> mappedApplications = new HashMap<>();
-
-        // what is happening is that you are mapping ONE unique category to ONE instance
-        // of AppData
-
-        // how to map the category to the appData??
-        for (String category : uniqueCategory) {
-            for (AppData app : appList) {
-                if (app.getAppCategory().equalsIgnoreCase(category)) {
-                    mappedApplications.put(category, app);
-                }
-            }
-        }
-
-        // System.out.println(mappedApplications);
-        return mappedApplications;
-
-    }
-
     public Map<String, Integer> count(List<AppData> appList) {
 
         Map<String, Integer> countOfApps = new HashMap<>();
